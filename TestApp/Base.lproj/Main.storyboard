@@ -36,18 +36,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="131" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And awesome... how much?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqe-5W-kpk">
-                                <rect key="frame" x="16" y="415" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="98" y="335" width="204" height="21"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="98" y="350" width="204" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You are???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vE-ly-M2G">
                                 <rect key="frame" x="16" y="164" width="568" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -75,6 +63,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L6M-KX-ilU">
                                 <rect key="frame" x="207" y="444" width="186" height="31"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="It6-S4-oJW"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="lPA-ZO-9Pa"/>
                                 </constraints>
                                 <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
@@ -90,16 +79,34 @@
                                     <action selector="awesomeUpdate:" destination="BYZ-38-t0r" eventType="valueChanged" id="EEm-uV-leV"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvA-MZ-aWo">
-                                <rect key="frame" x="16" y="507" width="568" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvA-MZ-aWo">
+                                <rect key="frame" x="16" y="524" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hFd-IY-ipe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And awesome... how much?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqe-5W-kpk">
+                                <rect key="frame" x="16" y="415" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="c6G-cD-mbW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="98" y="335" width="204" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="98" y="350" width="204" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pqe-5W-kpk" firstAttribute="top" secondItem="w2z-Ki-4sJ" secondAttribute="bottom" constant="100" id="5Cq-Y6-Qb9"/>
+                            <constraint firstItem="pqe-5W-kpk" firstAttribute="top" secondItem="w2z-Ki-4sJ" secondAttribute="bottom" priority="750" constant="100" id="5Cq-Y6-Qb9"/>
                             <constraint firstItem="L6M-KX-ilU" firstAttribute="top" secondItem="pqe-5W-kpk" secondAttribute="bottom" constant="8" id="5nw-kH-Rvs"/>
                             <constraint firstItem="nm8-kp-f3E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8qq-O8-nl8"/>
                             <constraint firstAttribute="centerX" secondItem="L6M-KX-ilU" secondAttribute="centerX" id="B5M-1X-Ic9"/>
@@ -107,11 +114,14 @@
                             <constraint firstItem="9vE-ly-M2G" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="HD6-FI-cxt"/>
                             <constraint firstItem="tvA-MZ-aWo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YjK-an-BdA"/>
                             <constraint firstItem="pqe-5W-kpk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZGe-VW-8dQ"/>
+                            <constraint firstItem="tvA-MZ-aWo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L6M-KX-ilU" secondAttribute="bottom" constant="8" id="b3L-7e-d06"/>
                             <constraint firstItem="w2z-Ki-4sJ" firstAttribute="top" secondItem="9vE-ly-M2G" secondAttribute="bottom" constant="100" id="bYW-NJ-dSM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nm8-kp-f3E" secondAttribute="bottom" id="dkk-mT-7Sa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nm8-kp-f3E" secondAttribute="trailing" constant="-16" id="f0c-3R-vVY"/>
+                            <constraint firstItem="L6M-KX-ilU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pqe-5W-kpk" secondAttribute="bottom" constant="8" id="n9V-dB-LVO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tvA-MZ-aWo" secondAttribute="bottom" id="o8B-wk-PDc"/>
                             <constraint firstItem="tvA-MZ-aWo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oa4-5m-B6G"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tvA-MZ-aWo" secondAttribute="bottom" constant="72" id="rSP-Q9-MOq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tvA-MZ-aWo" secondAttribute="bottom" priority="500" constant="72" id="rSP-Q9-MOq"/>
                             <constraint firstItem="9vE-ly-M2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rzw-0T-ocC"/>
                             <constraint firstItem="pqe-5W-kpk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sYI-oJ-KaE"/>
                             <constraint firstAttribute="centerX" secondItem="w2z-Ki-4sJ" secondAttribute="centerX" id="ssP-JK-8sh"/>
